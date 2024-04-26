@@ -2,7 +2,7 @@ name: runs-ttbot
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '45 * * * *'
   
   # push:
   #   branches:

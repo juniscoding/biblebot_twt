@@ -24,5 +24,14 @@ def post_quote():
     verse = verses[random_index]
     print("Get verse...")
     print(verse)
-    r = bot.create_tweet(text=verse)
-    return None
+    try:
+        r = bot.create_tweet(text=verse)
+    except:
+        random_index = random.randint(0, len(verses)-1)
+        print("Get random index...")
+        print(random_index)
+        verse = verses[random_index]
+        print("Get verse...")
+        print(verse)
+        r = bot.create_tweet(text=verse)
+    return "Posted"

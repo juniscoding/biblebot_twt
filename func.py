@@ -17,7 +17,12 @@ bot = tweepy.Client(
 
 def post_quote():
     verses = data["verses"]
+    print("Load verses...")
     random_index = random.randint(0, len(verses)-1)
+    print("Get random index...")
+    print(random_index)
     verse = verses[random_index]
+    print("Get verse...")
+    print(verse)
     r = bot.create_tweet(text=verse)
     return None

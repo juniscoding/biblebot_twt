@@ -20,9 +20,9 @@ def post_quote():
 	random_index = random.randint(0, len(verses)-1)
 	verse = verses[random_index]
     try:
-        r = bot.create_tweet(text=quote)
+        r = bot.create_tweet(text=verse)
     except:
-        random_index = random.randint(0, len(quotes)-1)
-        quote = quotes[random_index]
-        r = bot.create_tweet(text=quote)
+        random_index = random.randint(0, len(verses)-1)
+        verse = verses[random_index]
+        r = bot.create_tweet(text=verse)
     return None

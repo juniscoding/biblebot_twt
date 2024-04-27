@@ -19,7 +19,7 @@ def post_quote():
 	verses = data["verses"]
 	random_index = random.randint(0, len(verses)-1)
 	verse = verses[random_index]
-	try:
+    try:
         r = bot.create_tweet(text=quote)
     except:
         random_index = random.randint(0, len(quotes)-1)

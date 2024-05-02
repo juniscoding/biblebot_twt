@@ -3,7 +3,7 @@ import tweepy
 import json
 import random
 
-with open('quotes.json') as quotes:
+with open('verses.json') as quotes:
     data = json.load(quotes)
 
 
